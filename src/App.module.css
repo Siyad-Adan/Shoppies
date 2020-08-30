@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+.container {
+  box-sizing: border-box;
+  font-family: 'Crimson Text', serif;
+  background-color: #eee;
+  height: 100%;
+  width: 100%;
+}
+
+.dataContainer {
+  display: flex;
+  row-gap: 2rem;
+  flex-direction: row;
+}
