@@ -35,7 +35,7 @@ function Results(props) {
 									<div>
 										<span
 											data-place="top"
-											data-tip="You have already selected 5 nominations! Remove a nomination to select another search result!"
+											data-tip="You have already selected 5 nominations! Remove a nomination to select this movie!"
 											data-effect="solid"
 										>
 											<button
