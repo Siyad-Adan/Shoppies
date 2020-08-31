@@ -36,6 +36,7 @@ function Results(props) {
 										<span
 											data-place="top"
 											data-tip="You have already selected 5 nominations! Remove a nomination to select another search result!"
+											data-effect="solid"
 										>
 											<button
 												className={
@@ -64,6 +65,7 @@ function Results(props) {
 													''
 												)
 											}
+											data-effect="solid"
 										>
 											<button
 												className={
