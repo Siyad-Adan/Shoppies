@@ -32,7 +32,7 @@ function App() {
 					title="You have made five nominations! Thanks for picking!"
 					css={{ color: 'black', backgroundColor: 'yellow', fontSize: 20, marginBottom: 0 }}
 					image={checkMark}
-					imageClass={styles.checkmark}
+          imageClass={styles.checkmark}
 				/>
 			);
 		}
