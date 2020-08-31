@@ -8,9 +8,13 @@
   text-align: center;
 }
 
+.title {
+  border-bottom: 1px solid black;
+}
+
 .nominateButton {
   background-color: red;
-  padding: 0 10px;
+  padding: 10px 10px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -23,5 +27,6 @@
 .item {
   display: flex;
   margin: 10px;
-  padding: 0;
+  align-items: center;
+  gap: 10px;
 }

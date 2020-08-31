@@ -56,13 +56,17 @@ function Results(props) {
         </ul>
       );
     } else {
-      return <h3>No Results at the moment...</h3>;
+      return <h3>No results at the moment...</h3>;
     }
   };
 
   return (
     <div className={styles.container}>
-      <h2>Results for {resultText}</h2>
+      <h2>
+        <span className={styles.title}>
+          Results {`${resultText ? `for ${resultText}` : ""}`}
+        </span>
+      </h2>
       {displaySearchResults()}
     </div>
   );

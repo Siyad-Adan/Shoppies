@@ -30,7 +30,9 @@ function Nominations(props) {
   };
   return (
     <div className={styles.container}>
-      <h2>Nominations</h2>
+      <h2>
+        <span className={styles.title}>Nominations</span>
+      </h2>
       {displayNominations()}
     </div>
   );
