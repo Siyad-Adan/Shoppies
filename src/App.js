@@ -30,7 +30,7 @@ function App() {
     if (nominationItems.length === 5) {
       return (
         <Banner
-          title="You made 5 Nominations you are finished!"
+          title="You have made five nominations! Thanks for picking!"
           css={{ color: "white", backgroundColor: "#aaa", fontSize: 20 }}
           image={checkMark}
           imageClass={styles.checkmark}

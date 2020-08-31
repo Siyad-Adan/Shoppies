@@ -64,7 +64,7 @@ function Results(props) {
     <div className={styles.container}>
       <h2>
         <span className={styles.title}>
-          Results {`${resultText ? `for ${resultText}` : ""}`}
+          Results {`${resultText ? `for "${resultText}"` : ""}`}
         </span>
       </h2>
       {displaySearchResults()}
