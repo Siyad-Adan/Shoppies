@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://www.omdbapi.com/?apikey=53ef2fa&";
+const url = "https://www.omdbapi.com/?apikey=53ef2fa&type=movie&";
 
 export const fetchData = async (title) => {
   let changeableUrl = url;
