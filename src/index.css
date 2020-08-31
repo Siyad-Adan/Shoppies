@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+
 body {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Crimson Text", serif;
-  background-color: #eee;
-  height: 100%;
-  width: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Crimson Text", arial;
+	background-color: #white;
+	height: 100%;
+	width: 100%;
 }
