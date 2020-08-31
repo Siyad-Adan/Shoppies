@@ -41,7 +41,7 @@ function App() {
 
   useEffect(() => {
     async function fetchMovieTitles() {
-      setSearchItemsLoading(true);
+      if (searchText) setSearchItemsLoading(true);
       const data = await fetchData(searchText);
       setSearchItemsLoading(false);
       if (data) {
