@@ -1,7 +1,27 @@
 .container {
-    background-color: white;
-    border: 1px solid black;
-    margin: 10px;
-    padding: 30px;
-    width: 50%;
+  background-color: white;
+  border: 1px solid #eee;
+  margin: 10px;
+  padding: 30px;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nominateButton {
+  background-color: red;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.nominateButton:hover {
+  background-color: #ff8484;
+}
+
+.item {
+  display: flex;
+  margin: 10px;
+  padding: 0;
 }

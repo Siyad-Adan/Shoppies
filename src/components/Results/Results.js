@@ -1,41 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import styles from './Results.module.css'
+import React from "react";
+import ReactLoading from "react-loading";
+import styles from "./Results.module.css";
 
 function Results(props) {
-    const { results, clickedItem, nominations }  = props;
-    let disabled;
+  const {
+    results,
+    clickedItem,
+    nominations,
+    searchItemsLoad,
+    resultText,
+  } = props;
+  let disabled;
 
-    const displaySearchResults = () => {
-        if(results.length){
+  const displaySearchResults = () => {
+    if (searchItemsLoad) {
+      return (
+        <ReactLoading
+          type="cylon"
+          color="black"
+          className={styles.loadingIcon}
+        />
+      );
+    } else if (results.length) {
+      return (
+        <ul>
+          {results.map((searchResultMovie, idx) => {
+            disabled = false;
+            nominations.forEach((nominatedMovie) => {
+              if (nominatedMovie.imdbID === searchResultMovie.imdbID) {
+                disabled = true;
+                return false;
+              }
+            });
+
+            if (nominations.length === 5) disabled = true;
             return (
-                <ul>
-                {results.map((searchResultMovie, idx) => {
-                    disabled = false;
-                    nominations.forEach(nominatedMovie => {
-                        if(nominatedMovie.imdbID === searchResultMovie.imdbID){
-                            disabled = true;
-                            return false;
-                        }
-            
-                    })
-                    return (
-                        <li key={idx}>{searchResultMovie.Title} ({searchResultMovie.Year})<button disabled={disabled} onClick={() => clickedItem(searchResultMovie)}>Nominate</button></li>
-                    )
-                })}
-                </ul>
+              <div className={styles.item}>
+                <li key={idx}>
+                  {searchResultMovie.Title} ({searchResultMovie.Year})
+                </li>
+                <button
+                  className={
+                    disabled
+                      ? styles.resultButtonInactive
+                      : styles.resultButtonActive
+                  }
+                  disabled={disabled}
+                  onClick={() => clickedItem(searchResultMovie)}
+                >
+                  Nominate
+                </button>
+              </div>
             );
-        }
-        else{
-            return(
-                <h3>No Results at the moment...</h3>
-            )
-        }
+          })}
+        </ul>
+      );
+    } else {
+      return <h3>No Results at the moment...</h3>;
     }
+  };
 
   return (
-    <div className ={styles.container}>
-      <h2>Results for {props.resultText}</h2>
-        {displaySearchResults()}
+    <div className={styles.container}>
+      <h2>Results for {resultText}</h2>
+      {displaySearchResults()}
     </div>
   );
 }

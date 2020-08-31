@@ -1,11 +1,29 @@
 .container {
-    background-color: white;
-    border: 1px solid black;
-    margin: 10px;
-    padding: 30px;
-    width: 50%;
+  position: relative;
+  background-color: white;
+  border: 1px solid #eee;
+  margin: 10px;
+  padding: 30px;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
 }
 
-li{
-    padding: 5px 5px;
+.resultButtonActive,
+.resultButtonInactive {
+  background-color: green;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.resultButtonActive:hover {
+  background-color: #90ee90;
+}
+
+.item {
+  display: flex;
+  margin: 10px;
+  padding: 0;
 }
