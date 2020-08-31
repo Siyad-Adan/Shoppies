@@ -7,6 +7,9 @@ function Search(props) {
   const { onChangedText } = props;
   return (
     <div className={styles.container}>
+      <p>
+        <span className={styles.title}>Movie Title</span>
+      </p>
       <SearchBar
         placeholder={"Enter a movie title...."}
         onChange={(newValue) => onChangedText(newValue)}

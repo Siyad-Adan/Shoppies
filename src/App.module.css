@@ -6,6 +6,7 @@
   text-align: center;
   background: white;
   border-radius: 90%;
+  border: 1px solid #ddd;
 }
 .dataContainer {
   display: flex;
@@ -32,4 +33,8 @@ li {
   background-color: #eee;
   margin: 0px auto;
   border-radius: 10px;
+}
+
+p {
+  margin: 0;
 }

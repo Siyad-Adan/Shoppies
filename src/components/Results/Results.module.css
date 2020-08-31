@@ -8,10 +8,6 @@
   text-align: center;
 }
 
-.title {
-  border-bottom: 1px solid black;
-}
-
 .resultButtonActive,
 .resultButtonInactive {
   background-color: green;
@@ -34,4 +30,8 @@
   margin: 10px;
   align-items: center;
   gap: 10px;
+}
+
+.title {
+  border-bottom: 1px solid black;
 }
